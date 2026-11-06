@@ -1,0 +1,30 @@
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Laravel
+/backend/vendor/
+/backend/node_modules/
+/backend/storage/*.key
+/backend/bootstrap/cache/*
+!/backend/bootstrap/cache/.gitignore
+
+# Flutter
+/frontend/.dart_tool/
+/frontend/.flutter-plugins
+/frontend/.flutter-plugins-dependencies
+/frontend/build/
+/frontend/.packages
+/frontend/.pub-cache/
+/frontend/android/local.properties
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
