@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -13,7 +14,13 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     /** @use HasFactory<UserFactory> */
-   use HasApiTokens, HasFactory, Notifiable;
+   use HasApiTokens, HasFactory, Notifiable; 
+
+   // Satu user dapat memiliki banyak riwayat rekomendasi
+public function recommendationHistories(): HasMany
+{
+    return $this->hasMany(RecommendationHistory::class);
+}
 
     /**
      * The attributes that are mass assignable.
