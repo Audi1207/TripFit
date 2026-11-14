@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\RecommendationController;
 use App\Http\Controllers\Api\CityController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,7 +16,10 @@ Route::get('/cities', [CityController::class, 'index']);
 Route::get('/cities/{id}', [CityController::class, 'show']); 
 
 Route::get('/destinations', [DestinationController::class, 'index']);
-Route::get('/destinations/{id}', [DestinationController::class, 'show']);
+Route::get('/destinations/{id}', [DestinationController::class, 'show']); 
+
+// Recommendation Route
+Route::post('/recommendations', [RecommendationController::class, 'recommend']);
 
 // Protected routes (wajib login)
 Route::middleware('auth:sanctum')->group(function () {

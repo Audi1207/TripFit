@@ -33,6 +33,12 @@ class Destination extends Model
         )->withTimestamps();
     }
 
+    // Destinasi memiliki banyak estimasi biaya
+    public function costEstimates(): HasMany
+    {
+        return $this->hasMany(DestinationCostEstimate::class);
+    }
+
     // Destinasi dapat muncul dalam banyak hasil rekomendasi
     public function recommendationItems(): HasMany
     {

@@ -22,7 +22,7 @@ class RecommendationService
     }
 
     /**
-     * Mengubah kategori menjadi representasi biner (one-hot encoding).
+     * Mengubah kategori menjadi one-hot encoding.
      */
     private function encodeCategories(array $categoryNames): array
     {
@@ -54,7 +54,6 @@ class RecommendationService
 
         foreach ($userVector as $index => $value) {
             $difference = $value - $destinationVector[$index];
-
             $sum += pow($difference, 2);
         }
 
@@ -68,10 +67,11 @@ class RecommendationService
         string $regionName,
         array $selectedCategories,
         int $maxBudget,
+        string $durationLevel,
         int $resultCount = 5
     ): Collection {
 
-        // 1. Validasi preferensi pengguna
+        // 1. Validasi preferensi pengguna.
         $selectedCategories = array_values(
             array_unique($selectedCategories)
         );
@@ -82,7 +82,10 @@ class RecommendationService
             );
         }
 
-        if (empty($selectedCategories) || count($selectedCategories) > 3) {
+        if (
+            empty($selectedCategories) ||
+            count($selectedCategories) > 3
+        ) {
             throw new \InvalidArgumentException(
                 'Pilih minimal 1 dan maksimal 3 kategori.'
             );
@@ -103,26 +106,49 @@ class RecommendationService
             );
         }
 
+        if (!in_array(
+            $durationLevel,
+            ['Short', 'Medium', 'Long'],
+            true
+        )) {
+            throw new \InvalidArgumentException(
+                'Durasi perjalanan tidak valid.'
+            );
+        }
+
         if ($resultCount < 1 || $resultCount > 5) {
             throw new \InvalidArgumentException(
                 'Jumlah rekomendasi harus antara 1 sampai 5.'
             );
         }
 
-        // 2. Filtering berdasarkan wilayah dan budget
-        $destinations = Destination::with(['city', 'categories'])
+        // 2. Filtering berdasarkan wilayah,
+        // durasi, dan estimasi total biaya.
+        $destinations = Destination::with([
+            'city',
+            'categories',
+            'costEstimates' => function ($query) use ($durationLevel) {
+                $query->where('duration_level', $durationLevel);
+            },
+        ])
             ->whereHas('city', function ($query) use ($regionName) {
                 $query->where('city_name', $regionName);
             })
-            ->where('ticket_price_rp', '<=', $maxBudget)
+            ->whereHas('costEstimates', function ($query) use (
+                $durationLevel,
+                $maxBudget
+            ) {
+                $query->where('duration_level', $durationLevel)
+                    ->where('estimated_cost_rp', '<=', $maxBudget);
+            })
             ->get();
 
-        // 3. Encoding preferensi kategori pengguna
+        // 3. Encoding preferensi kategori pengguna.
         $userVector = $this->encodeCategories($selectedCategories);
 
-        // 4. Menghitung jarak setiap destinasi
+        // 4. Menghitung jarak setiap destinasi.
         $rankedDestinations = $destinations->map(
-            function ($destination) use ($userVector) {
+            function ($destination) use ($userVector, $durationLevel) {
 
                 $destinationCategories = $destination
                     ->categories
@@ -140,32 +166,75 @@ class RecommendationService
 
                 $destination->distance = round($distance, 5);
 
-                // Skor kemiripan: semakin tinggi semakin mirip
                 $destination->similarity_score = round(
                     1 / (1 + $distance),
                     5
                 );
 
+                // Menyimpan estimasi biaya sesuai durasi.
+                $costEstimate = $destination->costEstimates->first();
+
+                $destination->estimated_cost_rp =
+                    $costEstimate->estimated_cost_rp;
+
+                $destination->duration_level = $durationLevel;
+
                 return $destination;
             }
         );
 
-        // 5. Ranking berdasarkan jarak terdekat.
-        // Jika jarak sama, rating lebih tinggi diprioritaskan.
+        // 5. Menentukan rekomendasi utama dan alternatif.
+        $rankedDestinations = $rankedDestinations->map(
+            function ($destination) use ($selectedCategories) {
+
+                $destinationCategories = $destination
+                    ->categories
+                    ->pluck('category_name')
+                    ->all();
+
+                $hasMatchingCategory = !empty(
+                    array_intersect(
+                        $selectedCategories,
+                        $destinationCategories
+                    )
+                );
+
+                $destination->is_alternative = !$hasMatchingCategory;
+
+                $destination->recommendation_type = $hasMatchingCategory
+                    ? 'Rekomendasi Utama'
+                    : 'Alternatif';
+
+                return $destination;
+            }
+        );
+
+        // 6. Ranking berdasarkan jenis rekomendasi,
+        // jarak terdekat, kemudian rating tertinggi.
         $rankedDestinations = $rankedDestinations->sort(
             function ($a, $b) {
 
-                $distanceComparison = $a->distance <=> $b->distance;
+                $typeComparison =
+                    $a->is_alternative <=> $b->is_alternative;
+
+                if ($typeComparison !== 0) {
+                    return $typeComparison;
+                }
+
+                $distanceComparison =
+                    $a->distance <=> $b->distance;
 
                 if ($distanceComparison !== 0) {
                     return $distanceComparison;
                 }
 
-                return (float) $b->rating <=> (float) $a->rating;
+                // Rating NULL diperlakukan sebagai 0.
+                return (float) ($b->rating ?? 0)
+                    <=> (float) ($a->rating ?? 0);
             }
         );
 
-        // 6. Mengambil sejumlah hasil yang diminta pengguna
+        // 7. Mengambil hasil sesuai jumlah yang diminta.
         return $rankedDestinations
             ->take($resultCount)
             ->values();

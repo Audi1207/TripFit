@@ -1,51 +1,63 @@
-﻿destination_id,destination_name,region_name,province,administrative_city_regency,category,ticket_price_rp,rating
-1,Taman Nasional Komodo,Labuan Bajo,Nusa Tenggara Timur,Labuan Bajo,Hiburan & Rekreasi,50000,4.6
-2,Goa Batu Cermin,Labuan Bajo,Nusa Tenggara Timur,Labuan Bajo,Alam & Pegunungan,25000,4.4
-3,Gua Rangko,Labuan Bajo,Nusa Tenggara Timur,Labuan Bajo,Alam & Pegunungan,20000,4.4
-4,Pulau Kelor,Labuan Bajo,Nusa Tenggara Timur,Labuan Bajo,Pantai & Bahari,10000,4.9
-5,Keraton Yogyakarta,Yogyakarta,DI Yogyakarta,Kota Yogyakarta,Budaya & Sejarah,25000,4.7
-6,Tamansari,Yogyakarta,DI Yogyakarta,Kota Yogyakarta,Budaya & Sejarah,15000,4.6
-7,Museum Sonobudoyo,Yogyakarta,DI Yogyakarta,Kota Yogyakarta,Budaya & Sejarah,10000,4.8
-8,Candi Prambanan,Yogyakarta,DI Yogyakarta,Sleman,Budaya & Sejarah,50000,4.7
-9,Tebing Breksi,Yogyakarta,DI Yogyakarta,Sleman,Alam & Pegunungan,10000,4.5
-10,Museum Angkut,Malang Raya,Jawa Timur,Kota Batu,Budaya & Sejarah,130000,4.7
-11,Jatim Park 1,Malang Raya,Jawa Timur,Kota Batu,Hiburan & Rekreasi,120000,4.5
-12,Selecta,Malang Raya,Jawa Timur,Kota Batu,Hiburan & Rekreasi,50000,4.5
-13,Coban Rondo,Malang Raya,Jawa Timur,Kabupaten Malang,Alam & Pegunungan,35000,4.5
-14,Pantai Balekambang,Malang Raya,Jawa Timur,Kabupaten Malang,Pantai & Bahari,15000,4.4
-15,Taman Panorama & Lobang Jepang,Bukittinggi,Sumatera Barat,Bukittinggi,Budaya & Sejarah,20000,4.6
-16,Taman Marga Satwa Kinantan,Bukittinggi,Sumatera Barat,Bukittinggi,Hiburan & Rekreasi,20000,4.5
-17,Benteng Fort de Kock,Bukittinggi,Sumatera Barat,Bukittinggi,Budaya & Sejarah,20000,4.5
-18,Museum Rumah Kelahiran Bung Hatta,Bukittinggi,Sumatera Barat,Bukittinggi,Budaya & Sejarah,5000,4.8
-19,Janjang Koto Gadang,Bukittinggi,Sumatera Barat,Agam,Alam & Pegunungan,10000,4.4
-20,Taman Hiburan Pantai Kenjeran,Surabaya,Jawa Timur,Surabaya,Pantai & Bahari,20000,4.3
-21,Museum Sepuluh Nopember,Surabaya,Jawa Timur,Surabaya,Budaya & Sejarah,5000,4.7
-22,Museum Dr. Soetomo,Surabaya,Jawa Timur,Surabaya,Budaya & Sejarah,5000,4.7
-23,Museum Pendidikan,Surabaya,Jawa Timur,Surabaya,Budaya & Sejarah,5000,4.8
-24,Museum Surabaya Gedung Siola,Surabaya,Jawa Timur,Surabaya,Budaya & Sejarah,0,4.6
-25,Museum Aceh,Banda Aceh,Aceh,Banda Aceh,Budaya & Sejarah,5000,4.6
-26,Museum Tsunami Aceh,Banda Aceh,Aceh,Banda Aceh,Budaya & Sejarah,15000,4.6
-27,PLTD Apung,Banda Aceh,Aceh,Banda Aceh,Budaya & Sejarah,5000,4.6
-28,Kapal di Atas Rumah,Banda Aceh,Aceh,Aceh Besar,Budaya & Sejarah,0,4.5
-29,Gunongan,Banda Aceh,Aceh,Banda Aceh,Budaya & Sejarah,0,4.6
-30,Lawang Sewu,Semarang,Jawa Tengah,Semarang,Budaya & Sejarah,40000,4.6
-31,Goa Kreo,Semarang,Jawa Tengah,Semarang,Hiburan & Rekreasi,10000,4.3
-32,Kota Lama,Semarang,Jawa Tengah,Semarang,Budaya & Sejarah,0,4.8
-33,Museum Kota Lama,Semarang,Jawa Tengah,Semarang,Budaya & Sejarah,10000,4.6
-34,Semarang Zoo,Semarang,Jawa Tengah,Semarang,Hiburan & Rekreasi,25000,4
-35,Kebun Raya Bogor,Bogor,Jawa Barat,Kota Bogor,Alam & Pegunungan,50000,4.7
-36,Curug Ciherang,Bogor,Jawa Barat,Kabupaten Bogor,Alam & Pegunungan,25000,4.4
-37,Taman Safari Indonesia,Bogor,Jawa Barat,Kabupaten Bogor,Hiburan & Rekreasi,240000,4.7
-38,The Jungle Waterpark,Bogor,Jawa Barat,Kota Bogor,Hiburan & Rekreasi,85000,4.5
-39,Situ Gede,Bogor,Jawa Barat,Kota Bogor,Alam & Pegunungan,10000,4.4
-40,Taman Nasional Bunaken,Manado,Sulawesi Utara,Manado,Pantai & Bahari,50000,4.6
-41,Museum Negeri Provinsi Sulawesi Utara,Manado,Sulawesi Utara,Manado,Budaya & Sejarah,5000,4.3
-42,Pantai Malalayang,Manado,Sulawesi Utara,Manado,Pantai & Bahari,5000,4.4
-43,Pulau Siladen,Manado,Sulawesi Utara,Manado,Pantai & Bahari,50000,4.7
-44,Gunung Tumpa,Manado,Sulawesi Utara,Manado,Alam & Pegunungan,5000,4.6
-45,Monumen Nasional,Jakarta,DKI Jakarta,Jakarta Pusat,Budaya & Sejarah,15000,4.6
-46,Museum Nasional,Jakarta,DKI Jakarta,Jakarta Pusat,Budaya & Sejarah,10000,4.7
-47,Museum Bank Indonesia,Jakarta,DKI Jakarta,Jakarta Barat,Budaya & Sejarah,0,4.7
-48,Taman Mini Indonesia Indah,Jakarta,DKI Jakarta,Jakarta Timur,Budaya & Sejarah,25000,4.6
-49,Kebun Binatang Ragunan,Jakarta,DKI Jakarta,Jakarta Selatan,Hiburan & Rekreasi,4000,4.5
-50,Pantai Pede,Labuan Bajo,Nusa Tenggara Timur,Labuan Bajo,Pantai & Bahari,0,3.8
+﻿destination_id,destination_name,region_name,province,administrative_city_regency,category,ticket_price_rp,rating,main_food_price_min_rp,main_food_price_max_rp
+1,Taman Nasional Komodo,Labuan Bajo,Nusa Tenggara Timur,Labuan Bajo,Hiburan & Rekreasi,50000,4.6,,
+2,Goa Batu Cermin,Labuan Bajo,Nusa Tenggara Timur,Labuan Bajo,Alam & Pegunungan,25000,4.4,,
+3,Gua Rangko,Labuan Bajo,Nusa Tenggara Timur,Labuan Bajo,Alam & Pegunungan,20000,4.4,,
+4,Pulau Kelor,Labuan Bajo,Nusa Tenggara Timur,Labuan Bajo,Pantai & Bahari,10000,4.9,,
+5,Keraton Yogyakarta,Yogyakarta,DI Yogyakarta,Kota Yogyakarta,Budaya & Sejarah,25000,4.7,,
+6,Tamansari,Yogyakarta,DI Yogyakarta,Kota Yogyakarta,Budaya & Sejarah,15000,4.6,,
+7,Museum Sonobudoyo,Yogyakarta,DI Yogyakarta,Kota Yogyakarta,Budaya & Sejarah,10000,4.8,,
+8,Candi Prambanan,Yogyakarta,DI Yogyakarta,Sleman,Budaya & Sejarah,50000,4.7,,
+9,Tebing Breksi,Yogyakarta,DI Yogyakarta,Sleman,Alam & Pegunungan,10000,4.5,,
+10,Museum Angkut,Malang Raya,Jawa Timur,Kota Batu,Budaya & Sejarah,130000,4.7,,
+11,Jatim Park 1,Malang Raya,Jawa Timur,Kota Batu,Hiburan & Rekreasi,120000,4.5,,
+12,Selecta,Malang Raya,Jawa Timur,Kota Batu,Hiburan & Rekreasi,50000,4.5,,
+13,Coban Rondo,Malang Raya,Jawa Timur,Kabupaten Malang,Alam & Pegunungan,35000,4.5,,
+14,Pantai Balekambang,Malang Raya,Jawa Timur,Kabupaten Malang,Pantai & Bahari,15000,4.4,,
+15,Taman Panorama & Lobang Jepang,Bukittinggi,Sumatera Barat,Bukittinggi,Budaya & Sejarah,20000,4.6,,
+16,Taman Marga Satwa Kinantan,Bukittinggi,Sumatera Barat,Bukittinggi,Hiburan & Rekreasi,20000,4.5,,
+17,Benteng Fort de Kock,Bukittinggi,Sumatera Barat,Bukittinggi,Budaya & Sejarah,20000,4.5,,
+18,Museum Rumah Kelahiran Bung Hatta,Bukittinggi,Sumatera Barat,Bukittinggi,Budaya & Sejarah,5000,4.8,,
+19,Janjang Koto Gadang,Bukittinggi,Sumatera Barat,Agam,Alam & Pegunungan,10000,4.4,,
+20,Taman Hiburan Pantai Kenjeran,Surabaya,Jawa Timur,Surabaya,Pantai & Bahari,20000,4.3,,
+21,Museum Sepuluh Nopember,Surabaya,Jawa Timur,Surabaya,Budaya & Sejarah,5000,4.7,,
+22,Museum Dr. Soetomo,Surabaya,Jawa Timur,Surabaya,Budaya & Sejarah,5000,4.7,,
+23,Museum Pendidikan,Surabaya,Jawa Timur,Surabaya,Budaya & Sejarah,5000,4.8,,
+24,Museum Surabaya Gedung Siola,Surabaya,Jawa Timur,Surabaya,Budaya & Sejarah,0,4.6,,
+25,Museum Aceh,Banda Aceh,Aceh,Banda Aceh,Budaya & Sejarah,5000,4.6,,
+26,Museum Tsunami Aceh,Banda Aceh,Aceh,Banda Aceh,Budaya & Sejarah,15000,4.6,,
+27,PLTD Apung,Banda Aceh,Aceh,Banda Aceh,Budaya & Sejarah,5000,4.6,,
+28,Kapal di Atas Rumah,Banda Aceh,Aceh,Aceh Besar,Budaya & Sejarah,0,4.5,,
+29,Gunongan,Banda Aceh,Aceh,Banda Aceh,Budaya & Sejarah,0,4.6,,
+30,Lawang Sewu,Semarang,Jawa Tengah,Semarang,Budaya & Sejarah,40000,4.6,,
+31,Goa Kreo,Semarang,Jawa Tengah,Semarang,Hiburan & Rekreasi,10000,4.3,,
+32,Kota Lama,Semarang,Jawa Tengah,Semarang,Budaya & Sejarah,0,4.8,,
+33,Museum Kota Lama,Semarang,Jawa Tengah,Semarang,Budaya & Sejarah,10000,4.6,,
+34,Semarang Zoo,Semarang,Jawa Tengah,Semarang,Hiburan & Rekreasi,25000,4,,
+35,Kebun Raya Bogor,Bogor,Jawa Barat,Kota Bogor,Alam & Pegunungan,50000,4.7,,
+36,Curug Ciherang,Bogor,Jawa Barat,Kabupaten Bogor,Alam & Pegunungan,25000,4.4,,
+37,Taman Safari Indonesia,Bogor,Jawa Barat,Kabupaten Bogor,Hiburan & Rekreasi,240000,4.7,,
+38,The Jungle Waterpark,Bogor,Jawa Barat,Kota Bogor,Hiburan & Rekreasi,85000,4.5,,
+39,Situ Gede,Bogor,Jawa Barat,Kota Bogor,Alam & Pegunungan,10000,4.4,,
+40,Taman Nasional Bunaken,Manado,Sulawesi Utara,Manado,Pantai & Bahari,50000,4.6,,
+41,Museum Negeri Provinsi Sulawesi Utara,Manado,Sulawesi Utara,Manado,Budaya & Sejarah,5000,4.3,,
+42,Pantai Malalayang,Manado,Sulawesi Utara,Manado,Pantai & Bahari,5000,4.4,,
+43,Pulau Siladen,Manado,Sulawesi Utara,Manado,Pantai & Bahari,50000,4.7,,
+44,Gunung Tumpa,Manado,Sulawesi Utara,Manado,Alam & Pegunungan,5000,4.6,,
+45,Monumen Nasional,Jakarta,DKI Jakarta,Jakarta Pusat,Budaya & Sejarah,15000,4.6,,
+46,Museum Nasional,Jakarta,DKI Jakarta,Jakarta Pusat,Budaya & Sejarah,10000,4.7,,
+47,Museum Bank Indonesia,Jakarta,DKI Jakarta,Jakarta Barat,Budaya & Sejarah,0,4.7,,
+48,Taman Mini Indonesia Indah,Jakarta,DKI Jakarta,Jakarta Timur,Budaya & Sejarah,25000,4.6,,
+49,Kebun Binatang Ragunan,Jakarta,DKI Jakarta,Jakarta Selatan,Hiburan & Rekreasi,4000,4.5,,
+50,Pantai Pede,Labuan Bajo,Nusa Tenggara Timur,Labuan Bajo,Pantai & Bahari,0,3.8,,
+51,Pusat Kuliner Kampung Ujung,Labuan Bajo,Nusa Tenggara Timur,Kabupaten Manggarai Barat,Kuliner,0,4.6,25000,200000
+52,Kawasan Gudeg Wijilan,Yogyakarta,DI Yogyakarta,Kota Yogyakarta,Kuliner,0,,20000,65000
+53,Pasar Oro-Oro Dowo,Malang Raya,Jawa Timur,Kota Malang,Kuliner,0,4.7,15000,60000
+54,Pasar Atom,Surabaya,Jawa Timur,Kota Surabaya,Kuliner,0,4.5,12000,100000
+55,Pasar Semawis,Semarang,Jawa Tengah,Kota Semarang,Kuliner,0,,15000,100000
+56,Pasar Peunayong,Banda Aceh,Aceh,Kota Banda Aceh,Kuliner,0,,15000,100000
+57,Masjid Gedhe Kauman,Yogyakarta,DI Yogyakarta,Kota Yogyakarta,Religi,0,4.8,,
+58,Masjid Nasional Al-Akbar,Surabaya,Jawa Timur,Kota Surabaya,Religi,0,4.9,,
+59,Masjid Raya Baiturrahman,Banda Aceh,Aceh,Kota Banda Aceh,Religi,0,4.9,,
+60,Masjid Agung Jawa Tengah,Semarang,Jawa Tengah,Kota Semarang,Religi,0,4.7,,
+61,Masjid Istiqlal,Jakarta,DKI Jakarta,Kota Jakarta Pusat,Religi,0,4.8,,
+62,Klenteng Ban Hin Kiong,Manado,Sulawesi Utara,Kota Manado,Religi,0,4.6,,
